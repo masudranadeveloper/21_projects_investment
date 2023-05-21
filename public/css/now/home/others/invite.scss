@@ -1,0 +1,75 @@
+#invite_section{
+    .container{
+        .paclages_card_wrapper{
+            margin-top: 2.5rem;
+            border: 2px groove var(--primary);
+            border-radius: var(--border-radius);
+            .paclages_card_wrapper_header{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 2px groove var(--primary);
+                margin-bottom: 1rem;
+                padding: 0.8rem;
+            }
+            .paclages_card_wrapper_footer{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 1rem;
+                padding: 0.8rem;
+                .cards{
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: center;
+                    flex-direction: column;
+                    border-radius: 7px;
+                    padding: 1rem;
+                    border: 1px solid white;
+                    background: black;
+                    .header{
+                        color: var(--primary);
+                        margin-bottom: 1rem !important;
+                        text-align: center;
+                    }
+                    button{
+                        color: black;
+                        margin-top: 1rem !important;
+                        box-shadow: 5px 5px 15px #0e4639;
+                        border-radius: 7px;
+                    }
+                }
+            }
+        }
+        // copy_invitation_code_wrapper
+        .copy_invitation_code_wrapper{
+            margin-top: 2.5rem;
+            border: 2px groove var(--primary);
+            border-radius: var(--border-radius);
+            .top{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 2px groove var(--primary);
+                margin-bottom: 1rem;
+                padding: 0.8rem;
+            }
+            .body{
+                padding: 0.8rem;
+                position: relative;
+                span{
+                    position: relative;
+                }
+                i{
+                    position: absolute;
+                    right: 0;
+                    top: 2%;
+                    transform: translate(-50%, -50%);
+                    margin: 0 !important;
+                    font-size: 2.5rem;
+                    color: var(--primary);
+                }
+            }
+        }
+        
+    }
+}

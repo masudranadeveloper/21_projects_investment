@@ -1,0 +1,141 @@
+#home{
+    .container{
+
+        // menu_wrapper st 
+        .menu_wrapper{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 1rem;
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            border-top: none;
+            .item{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 0.3rem;
+                cursor: pointer;
+                img{
+                    height: 5rem;
+                    width: 5rem;
+                }
+            }
+        }
+        // menu_wrapper end 
+       
+        // notification st 
+        .notification_wrapper{
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            padding: 0.5rem;
+            margin-top: 1.5rem;
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            .notification_left{
+                padding-right: 0.7rem;
+            }
+            .notification_close{
+                i.fa-solid.fa-circle-xmark.header{
+                    margin: 0;
+                    margin-left: 1rem;
+                }
+            }
+            .notification_right{
+                overflow: hidden;
+                h2.title{
+                    width: 150rem;
+                    animation: notification_anime 10s linear infinite;
+                }
+            }
+        }
+        // notification end 
+
+        // cards end 
+        .paclages_card_wrapper{
+            margin-top: 2.5rem;
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+
+            .paclages_card_wrapper_footer{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 1rem;
+                padding: 0.8rem;
+                .cards{
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: center;
+                    flex-direction: column;
+                    backdrop-filter: blur(20px);
+                    border-radius: var(--border-radius);
+                    border: 1px solid var(--border-color);
+                    border-radius: 7px;
+                    padding: 1rem;
+                    .header{
+                        color: var(--primary);
+                        margin-bottom: 1rem !important;
+                        text-align: center;
+                    }
+                    .img_wrapper{
+                        position: relative;
+                        .lock_img{
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 50%;
+                            opacity: 1;
+                        }
+                        .unlock{
+                            display: none;
+                        }
+                        .lock{
+                            display: block;
+                        }
+                        img{
+                            width: 100%;
+                            border-radius: var(--border-radius);
+                            opacity: 0.2;
+                        }
+                    }
+                    button{
+                        color: black;
+                        margin-top: 1rem !important;
+                        box-shadow: 5px 5px 15px #0e4639;
+                        border-radius: 7px;
+                    }
+                }
+                .active{
+                    .img_wrapper{
+                        .lock_img{
+                            display: none;
+                        }
+                        img{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        // cards end
+       
+    }
+}
+
+// animation 
+@keyframes notification_anime {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform : translateX(-150rem);
+    }
+}
