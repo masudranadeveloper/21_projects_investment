@@ -11,7 +11,7 @@ const card_wrapper_f = () => {
     // ajax 
     $.ajax({
         'url' : url+'api/users/home/home_card_show',
-        'method' : 'POST',
+        'method' : 'GET',
         'data' : {},
         success:function(data){
             console.log(data);

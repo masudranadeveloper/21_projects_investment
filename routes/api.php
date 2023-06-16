@@ -57,7 +57,7 @@ Route::group(['prefix' => 'users'], function(){
         });
         // home 
         Route::group(['prefix' => 'home'], function(){
-            Route::post('/home_card_show', [backend_users_home_controller::class, 'home_card_show']) -> name('api_home_card_show');
+            Route::GET('/home_card_show', [backend_users_home_controller::class, 'home_card_show']) -> name('api_home_card_show');
         });
         // task 
         Route::group(['prefix' => 'task'], function(){
