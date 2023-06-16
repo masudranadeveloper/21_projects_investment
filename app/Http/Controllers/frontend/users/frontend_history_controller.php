@@ -70,6 +70,7 @@ class frontend_history_controller extends Controller
                     '03_user_recharges.orderID as orderID',
                     DB::raw("DATE_FORMAT(03_user_recharges.created_at, '%d %b, %Y %h:%i:%s%p') as date"),
                 )
+                -> where('userID', $userData['id'])
                 -> get();
         $compact = compact('deposit_data');
         return view('users.pages.history.deposit_history') -> with($compact);
@@ -87,6 +88,7 @@ class frontend_history_controller extends Controller
                     '04_user_withdraws.orderID as orderID',
                     DB::raw("DATE_FORMAT(04_user_withdraws.created_at, '%d %b, %Y %h:%i:%s%p') as date"),
                 )
+                -> where('userID', $userData['id'])
                 -> get();
         $compact = compact('withdraw_data');
         return view('users.pages.history.withdraw_history') -> with($compact);
