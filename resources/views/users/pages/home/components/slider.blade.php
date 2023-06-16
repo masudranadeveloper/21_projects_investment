@@ -3,7 +3,6 @@
 .swiper {
     width: 100%;
     height: 30vh;
-    background: #000;
 }
 
 .swiper-slide {
@@ -11,7 +10,6 @@
     color: #fff;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 1.5rem;
 }
 
 .parallax-bg {
@@ -25,6 +23,8 @@
     background-position: center;
 }
 .swiper-slide img{
+    height: 30vh;
+    width: 100%;
 }
 </style>
 
@@ -33,8 +33,8 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide"><img src="{{asset("images\slider\sl1.png")}}" alt=""></div>
       <div class="swiper-slide"><img src="{{asset("images\slider\sl2.jpg")}}" alt=""></div>
-      <div class="swiper-slide"><img src="{{asset("images\slider\sl3.jpg")}}" alt=""></div>
-      <div class="swiper-slide"><img src="{{asset("images\slider\sl4.jpg")}}" alt=""></div>
+      <div class="swiper-slide"><img src="{{asset("images\slider\sl3.png")}}" alt=""></div>
+      <div class="swiper-slide"><img src="{{asset("images\slider\sl4.png")}}" alt=""></div>
     </div>
     <div class="swiper-pagination"></div>
   </div>
