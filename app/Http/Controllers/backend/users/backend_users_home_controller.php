@@ -13,7 +13,7 @@ class backend_users_home_controller extends Controller
     public function home_card_show(Request $req)
     {
         $userData = user_account::where('csrf', $req -> session() -> get('csrf'))->first();
-        $data = user_package::orderBy('minAmount', 'ASC') -> get();
+        $data = user_package::orderBy('id', 'ASC') -> get();
         foreach ($data as $datas) {
             $st = $userData['vipBase'] == $datas['package_name'] ? 'active' : '';
             $result[] = [
