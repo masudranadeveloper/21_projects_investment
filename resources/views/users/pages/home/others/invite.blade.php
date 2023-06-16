@@ -11,7 +11,7 @@
             </div>
             <div class="body">
                 <p class="title">লিঙ্ক কপি করে বন্ধুদের মাঝে ছড়িয়ে দিন।</p>
-                <input style="width: 100%" type="text" style="color: green !important" class="form-controll header" id="copy_my_btn_t" value="{{url('signup/?reg='.$userData['invite'])}}">
+                <input style="width: 100%" type="text" style="color: green !important" class="form-controll header" id="copy_my_btn_t" value="{{url('account/signup/?reg='.$userData['invite'])}}">
                 <span class="copy_my_btn">
                     <i class="fa-solid fa-copy"></i>
                 </span>

@@ -16,49 +16,49 @@ class CreateUsersTable extends Migration
         Schema::create('01_user_account', function (Blueprint $table) {
             $table->id();
             // acc data
-            $table->text('fName') -> default('fName');
-            $table->text('lName') -> default('lName');
-            $table->text('userName') -> default('userName');
-            $table->text('mobileNumber') -> default('mobileNumber');
-            $table->text('email') -> default('email');
-            $table->text('password') -> default('password');
-            $table->text('csrf') -> default('csrf');
-            $table->text('picture') -> default('');
+            $table->string('fName') -> default('fName');
+            $table->string('lName') -> default('lName');
+            $table->string('userName') -> default('userName');
+            $table->string('mobileNumber') -> default('mobileNumber');
+            $table->string('email') -> default('email');
+            $table->string('password') -> default('password');
+            $table->string('csrf') -> default('csrf');
+            $table->string('picture') -> default('');
             // account details
-            $table->text('totalAmount') -> default('00');
-            $table->text('todaysAmount') -> default('00');
-            $table->text('bonusAmount') -> default('00');
-            $table->text('refreshDay') -> default('00');
-            $table->text('nextWithdraw') -> default('00');
+            $table->string('totalAmount') -> default('00');
+            $table->string('todaysAmount') -> default('00');
+            $table->string('bonusAmount') -> default('00');
+            $table->string('refreshDay') -> default('00');
+            $table->string('nextWithdraw') -> default('00');
             // gen
-            $table->text('invite') -> nullable();
-            $table->text('gen1st') -> nullable();
-            $table->text('gen2nd') -> nullable();
-            $table->text('gen3rd') -> nullable();
-            $table->text('gen4th') -> nullable();
-            $table->text('gen5th') -> nullable();
+            $table->string('invite') -> nullable();
+            $table->string('gen1st') -> nullable();
+            $table->string('gen2nd') -> nullable();
+            $table->string('gen3rd') -> nullable();
+            $table->string('gen4th') -> nullable();
+            $table->string('gen5th') -> nullable();
             // st
-            $table->text('vipBase') -> default('VIP0');
-            $table->text('accSt') -> default('active');
-            $table->text('online_time') -> default('00');
-            $table->text('task') -> default('0');
+            $table->string('vipBase') -> default('VIP0');
+            $table->string('accSt') -> default('active');
+            $table->string('online_time') -> default('00');
+            $table->string('task') -> default('0');
             // total
-            $table->text('totalDeposit') -> default('00');
-            $table->text('totalWithdraw') -> default('00');
-            $table->text('totalTeamRevenue') -> default('00');
-            $table->text('totalTaskIncome') -> default('00');
+            $table->string('totalDeposit') -> default('00');
+            $table->string('totalWithdraw') -> default('00');
+            $table->string('totalTeamRevenue') -> default('00');
+            $table->string('totalTaskIncome') -> default('00');
             // addresh
-            $table->text('village_word') -> default('unknown');
-            $table->text('city') -> default('CANADA');
-            $table->text('postcode') -> default('0000');
-            $table->text('country') -> default('USA');
+            $table->string('village_word') -> default('unknown');
+            $table->string('city') -> default('CANADA');
+            $table->string('postcode') -> default('0000');
+            $table->string('country') -> default('USA');
             // income
-            $table->text('todayIncome') -> default('00');
-            $table->text('easterdayIncome') -> default('00');
-            $table->text('todayRaferIncome') -> default('00');
-            $table->text('easterdayRaferIncome') -> default('00');
-            $table->text('todaysRechargeIncome') -> default('00');
-            $table->text('easterdayRechargeIncome') -> default('00');
+            $table->string('todayIncome') -> default('00');
+            $table->string('easterdayIncome') -> default('00');
+            $table->string('todayRaferIncome') -> default('00');
+            $table->string('easterdayRaferIncome') -> default('00');
+            $table->string('todaysRechargeIncome') -> default('00');
+            $table->string('easterdayRechargeIncome') -> default('00');
 
             $table->timestamps();
         });

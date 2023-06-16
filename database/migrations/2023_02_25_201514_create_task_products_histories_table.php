@@ -19,7 +19,7 @@ class CreateTaskProductsHistoriesTable extends Migration
             $table->string('ratings') -> nullable();
             $table->string('title') -> nullable();
             $table->string('price') -> nullable();
-            $table->text('img') -> nullable();
+            $table->string('img') -> nullable();
             $table->timestamps();
         });
     }

@@ -15,13 +15,13 @@ class CreateUserRechargesTable extends Migration
     {
         Schema::create('03_user_recharges', function (Blueprint $table) {
             $table->id();
-            $table->text('img');
-            $table->text('amount');
-            $table->text('userID');
-            $table->text('orderID');
-            $table->text('method');
-            $table->text('tranx');
-            $table->text('st');
+            $table->string('img');
+            $table->string('amount');
+            $table->string('userID');
+            $table->string('orderID');
+            $table->string('method');
+            $table->string('tranx');
+            $table->string('st');
             $table->timestamps();
         });
     }

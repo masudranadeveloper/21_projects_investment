@@ -15,12 +15,12 @@ class CreateUserPackagesTable extends Migration
     {
         Schema::create('02_user_packages', function (Blueprint $table) {
             $table->id();
-            $table->text('package_name') -> default('VIP0');
-            $table->text('minAmount') -> default('00');
-            $table->text('maxAmount') -> default('100');
-            $table->text('task') -> default('5');
-            $table->text('commission') -> default('0.2');
-            $table->text('img') -> default('package.png');
+            $table->string('package_name') -> default('VIP0');
+            $table->string('minAmount') -> default('00');
+            $table->string('maxAmount') -> default('100');
+            $table->string('task') -> default('5');
+            $table->string('commission') -> default('0.2');
+            $table->string('img') -> default('package.png');
             $table->timestamps();
         });
     }

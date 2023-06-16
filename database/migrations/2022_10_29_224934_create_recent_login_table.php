@@ -15,12 +15,12 @@ class CreateRecentLoginTable extends Migration
     {
         Schema::create('05_recent_login', function (Blueprint $table) {
             $table->id();
-            $table->text("ip");
-            $table->text("city");
-            $table->text("region");
-            $table->text("country");
-            $table->text("postal");
-            $table->text("userID");
+            $table->string("ip");
+            $table->string("city");
+            $table->string("region");
+            $table->string("country");
+            $table->string("postal");
+            $table->string("userID");
             $table->timestamps();
         });
     }

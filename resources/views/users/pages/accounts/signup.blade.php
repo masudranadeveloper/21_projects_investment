@@ -21,9 +21,9 @@
 
         <div class="container">
             <div class="header_mr">
-                <a href="">
-                          <i class="fa-solid fa-arrow-left title"></i>
-                      </a>
+                <a href="{{route('web_account_show_login')}}">
+                    <i class="fa-solid fa-arrow-left title"></i>
+                </a>
                 <p class="title">Back</p>
                 <span></span>
             </div>
@@ -94,7 +94,7 @@
                         <p class="title mb-0">Invitation code(optional)</p>
                         <div class="box mt-0" style="width: 100%">
                             <i class="fa-solid fa-lock title"></i>
-                            <input type="text" class="title" placeholder="Invitation code..." />
+                            <input type="text" class="title" placeholder="Invitation code..." value="<?php if(isset($_REQUEST['reg'])){echo $_REQUEST['reg'];}?>" />
                         </div>
                         <p class="title error"></p>
                     </div>

@@ -16,8 +16,8 @@ class CreateNoticeBordTable extends Migration
         Schema::create('12_notice_bord', function (Blueprint $table) {
             $table->id();
             $table->integer('userID');
-            $table->text('img') -> nullable();
-            $table->text('msg') -> nullable();
+            $table->string('img') -> nullable();
+            $table->string('msg') -> nullable();
             $table->timestamps();
         });
     }

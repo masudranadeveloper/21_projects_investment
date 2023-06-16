@@ -16,8 +16,8 @@ class CreateBalanceHistoriesTable extends Migration
         Schema::create('11_balance_histories', function (Blueprint $table) {
             $table->id();
             $table->string('userID') -> nullable();
-            $table->text('msg') -> nullable();
-            $table->text('type') -> nullable();
+            $table->string('msg') -> nullable();
+            $table->string('type') -> nullable();
             $table->timestamps();
         });
     }
