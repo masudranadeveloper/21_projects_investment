@@ -2,7 +2,7 @@
 @section('master')
 <link rel="stylesheet" href="{{asset('css\now\home\others\invite.css')}}?v={{Config('app.version')}}">
 
-<section id="invite_section">
+<section id="invite_section" style="margin-bottom:14rem">
     <div class="container">
         <!--copy invitaion code-->  
         <div class="copy_invitation_code_wrapper">
@@ -28,19 +28,48 @@
             <div class="paclages_card_wrapper_footer">
                 <div class="cards">
                     <h2 class="header">ডিপজিট কমিশন</h2>
-                    <p class="title">* ১ম জেনারেশন : {{$admin_data['depositGen1st']}} % </p>
-                    <p class="title">* ২য় জেনারেশন : {{$admin_data['depositGen2nd']}} % </p>
-                    <p class="title">* ৩য় জেনারেশন : {{$admin_data['depositGen3rd']}} % </p>
-                    <p class="title">* ৪র্থ জেনারেশন : {{$admin_data['depositGen4th']}} % </p>
-                    <p class="title">* ৫ম জেনারেশন : {{$admin_data['depositGen5th']}} % </p>
+                    @if (!empty($admin_data['depositGen1st']))
+                        <p class="title">* ১ম জেনারেশন : {{$admin_data['depositGen1st']}} % </p>
+                    @endif
+
+                    @if (!empty($admin_data['depositGen2nd']))
+                        <p class="title">* ২য় জেনারেশন : {{$admin_data['depositGen2nd']}} % </p>
+                    @endif
+                    @if (!empty($admin_data['depositGen3rd']))
+                        <p class="title">* ৩য় জেনারেশন : {{$admin_data['depositGen3rd']}} % </p>
+                    @endif
+
+                    @if (!empty($admin_data['depositGen4th']))
+                        <p class="title">* ৪র্থ জেনারেশন : {{$admin_data['depositGen4th']}} % </p>
+                    @endif
+
+                    @if (!empty($admin_data['depositGen5th']))
+                        <p class="title">* ৫ম জেনারেশন : {{$admin_data['depositGen5th']}} % </p>
+                    @endif
                 </div>
                 <div class="cards">
                     <h2 class="header">জেনারেশন কমিশন</h2>
-                    <p class="title">* ১ম জেনারেশন : {{$admin_data['gen1st']}} % </p>
-                    <p class="title">* ২য় জেনারেশন : {{$admin_data['gen2nd']}} % </p>
-                    <p class="title">* ৩য় জেনারেশন : {{$admin_data['gen3rd']}} % </p>
-                    <p class="title">* ৪র্থ জেনারেশন : {{$admin_data['gen4th']}} % </p>
-                    <p class="title">* ৫ম জেনারেশন : {{$admin_data['gen5th']}} % </p>
+
+                    @if (!empty($admin_data['taskGen1st']))
+                        <p class="title">* ১ম জেনারেশন : {{$admin_data['taskGen1st']}} % </p>
+                    @endif
+
+                    @if (!empty($admin_data['taskGen2nd']))
+                        <p class="title">* ২য় জেনারেশন : {{$admin_data['taskGen2nd']}} % </p>
+                    @endif
+
+                    @if (!empty($admin_data['taskGen3rd']))
+                        <p class="title">* ৩য় জেনারেশন : {{$admin_data['taskGen3rd']}} % </p>
+                    @endif
+
+                    @if (!empty($admin_data['taskGen4th']))
+                        <p class="title">* ৪র্থ জেনারেশন : {{$admin_data['taskGen4th']}} % </p>
+                    @endif
+
+                    @if (!empty($admin_data['taskGen5th']))
+                        <p class="title">* ৫ম জেনারেশন : {{$admin_data['taskGen5th']}} % </p>
+                    @endif
+
                 </div>
             </div>
         </div>

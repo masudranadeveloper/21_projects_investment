@@ -42,6 +42,7 @@ class CreateUsersTable extends Migration
             $table->string('accSt') -> default('active');
             $table->string('online_time') -> default('00');
             $table->string('task') -> default('0');
+            $table->string('deposit_time') -> default('1');
             // total
             $table->string('totalDeposit') -> default('00');
             $table->string('totalWithdraw') -> default('00');
