@@ -19,7 +19,7 @@ const card_wrapper_f = () => {
                 return `
                     <div class="cards ${curE.st}">
                         <h2 class="header">${curE.name}</h2>
-                        <p class="title">* ${curE.task*curE.commission}% কমিশন প্রতিদিন</p>
+                        <p class="title">* ${Number(curE.task*curE.commission).toFixed(0)}% কমিশন প্রতিদিন</p>
                         <p class="title">* ${curE.task}টি কাজ প্রতিদিন</p>
                         <p class="title">* ${curE.min_amount}টাকা - ${curE.max_amount}টাকা</p>
                         <div class="img_wrapper">

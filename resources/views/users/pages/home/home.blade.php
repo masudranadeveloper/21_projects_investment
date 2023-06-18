@@ -113,7 +113,7 @@
     </div>
 </div>
 
-<script src="{{asset('.\js\now\home.js')}}?v=1.0"></script>
+<script src="{{asset('.\js\now\home.js')}}?v=1.1"></script>
 
 @include('users.layout.footer2')
 @endsection
