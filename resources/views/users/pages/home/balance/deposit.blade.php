@@ -81,9 +81,9 @@
                             </p>
                             <p class="title mb-3">
                                 <i class="fa-solid fa-share text-primary main-header"></i>
-                                <span class="text">পেমেন্ট অপশন এ ক্লিক করুন</span>
+                                <span class="text">সেন্ড মানি অপশন এ ক্লিক করুন</span>
                             </p>
-                            <img src="{{asset('.\images\icons\bkash_payment.jpeg')}}" alt="">
+                            <img src="{{asset('.\images\icons\bkash_payment.jpeg')}}" class="d-none" alt="">
                         </div>
                     @endif
                     
