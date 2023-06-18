@@ -27,7 +27,7 @@
 
             <div class="paclages_card_wrapper_footer">
                 <div class="cards">
-                    <h2 class="header">ডিপজিট কমিশন</h2>
+                    <h2 class="header">রেফার কমিশন</h2>
                     @if (!empty($admin_data['depositGen1st']))
                         <p class="title">* ১ম জেনারেশন : {{$admin_data['depositGen1st']}} % </p>
                     @endif
@@ -48,7 +48,7 @@
                     @endif
                 </div>
                 <div class="cards">
-                    <h2 class="header">জেনারেশন কমিশন</h2>
+                    <h2 class="header">দল কমিশন</h2>
 
                     @if (!empty($admin_data['taskGen1st']))
                         <p class="title">* ১ম জেনারেশন : {{$admin_data['taskGen1st']}} % </p>
