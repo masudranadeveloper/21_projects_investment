@@ -27,8 +27,7 @@
                             <th>ID</th>
                             <th>Amount</th>
                             <th>Method</th>
-                            <th>Account</th>
-                            <th>User Status</th>
+                            <th>Number</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -39,14 +38,7 @@
                                 <td>{{$item['id']}}</td>
                                 <td>{{$item['amount']."bdt , ".$adminData['withdraw_charge'].'% charge'}} = @php echo $item['amount']-(($item['amount']*$adminData['withdraw_charge'])/100).'bdt' @endphp</td>
                                 <td>{{$item['method']}}</td>
-                                <td>{{$item['Address']}}</td>
-                                <td>
-                                    @if($item['online_time'] > time())
-                                        <span class="btn btn-success">Online</span>
-                                    @else
-                                        <span class="btn btn-danger">Ofline</span>
-                                    @endif
-                                </td>
+                                <td>{{$item['address']}}</td>
                                 <td>
                                     <a onclick="return confirm('You want to reject this item??')" href="{{route('api_withdraw_rejected', ['id' => $item['id']])}}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
                                     <a onclick="return confirm('You want to accept this item??')" href="{{route('api_withdraw_success', ['id' => $item['id']])}}" class="btn btn-success"><i class="fa-solid fa-square-check"></i></a>

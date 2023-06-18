@@ -27,9 +27,7 @@
                             <th>ID</th>
                             <th>Amount</th>
                             <th>Method</th>
-                            <th>Account</th>
-                            <th>Tax</th>
-                            <th>User Status</th>
+                            <th>Number</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -39,16 +37,8 @@
                             <tr>
                                 <td>{{$counter}}</td>
                                 <td>{{$item['amount']}}</td>
-                                <td>{{$item['Method']}}</td>
-                                <td>{{$item['Address']}}</td>
-                                <td>{{$item['Tax']}}</td>
-                                <td>
-                                    @if($item['online_time'] > time())
-                                        <span class="btn btn-success">Online</span>
-                                    @else
-                                        <span class="btn btn-danger">Ofline</span>
-                                    @endif
-                                </td>
+                                <td>{{$item['method']}}</td>
+                                <td>{{$item['address']}}</td>
                                 <td>
                                     <a href="{{route('api_withdraw_undo', ['id' => $item['id']])}}" class="btn btn-success"><i class="fa-solid fa-arrow-rotate-left"></i></i></a>
                                     <a href="{{route('show_users_profile', ['id' => $item['userID']])}}" class="btn btn-primary"><i class="fa-solid fa-eye"></i></a>
