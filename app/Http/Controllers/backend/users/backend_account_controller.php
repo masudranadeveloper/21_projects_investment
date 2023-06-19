@@ -25,7 +25,7 @@ class backend_account_controller extends Controller
             return false;
         }
         // invite
-        if(!empty($data['invite']) && user_account::where('invite', '==', '1')->exists()){
+        if(!empty($data['invite']) && (!user_account::where('invite', $data['invite'])->exists())){
             return response()->json(['invite' => 'Invalid invitation code!']);
             return false;
         }

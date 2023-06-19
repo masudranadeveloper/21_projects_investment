@@ -36,11 +36,6 @@ $('.account_login').submit(function(e){
      SIGN UP
 ==================
 */
-const video = document.getElementById('video');
-const canvas = document.getElementById('canvas');
-const snap = document.getElementById('snap');
-const ctx = canvas.getContext('2d');
-
 $('.account_signup').submit(function(e){
     e.preventDefault();
     $('.submit').val('Loadding...');
@@ -66,24 +61,10 @@ $('.account_signup').submit(function(e){
         success:function(data){
             if(data.st == true){
                 $('.submit').val('NEXT');
-                setTimeout(() => {
-                    $('.photo_notice').removeClass('d-none');
-                    $('.camera').removeClass('d-none');
-                    $('.account_signup').addClass('d-none');
-                    // open camera 
-                    navigator.mediaDevices.getUserMedia({ video: true })
-                    .then(function(stream) {
-                        video.srcObject = stream;
-                        video.play();
-                    })
-                    .catch(function(err) {
-                        $('.cammera_error').removeClass('d-none');
-                        $('.photo_notice').addClass('d-none');
-                        $('.account_signup').addClass('d-none');
-                    });
-                    // IDCard Data 
-                    dataSetID();
-                }, 100);
+                $(".account_signup").addClass('d-none');
+                // IDCard Data 
+                dataSetID();
+                $('.idcard').removeClass('d-none');
             }else{
                 if(data.username != 'undefined'){
                     $('.username').children('.error').html(data.username);
@@ -103,26 +84,6 @@ $('.account_signup').submit(function(e){
     });
 
 });
-/*
-============
-take pic
-============
-*/
-snap.addEventListener("click", function() {
-    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-    const dataUrl = canvas.toDataURL('image/png');
-    $('.users_img').attr('src', dataUrl);
-    $('.camera').addClass('d-none');
-    $('.account_signup').addClass('d-none');
-    $('.idcard').removeClass('d-none');
-});
-
-
-let close = $('button.btn.btn-danger.title');
-close.click(function(){
-    $('.photo_notice').addClass('d-none');
-});
-
 // user ID 
 const dataSetID = () => {
     $('.IDName').html($('.fName').children('.box').children('input').val()+' '+$('.lName').children('.box').children('input').val());

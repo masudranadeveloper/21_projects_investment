@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    @php
+        $userData = App\Models\user_account::where('csrf', session() -> get('csrf')) -> first();
+        $adminData = App\Models\admin_account::where('id',1) -> first();
+    @endphp
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>{{$adminData['title']}}</title>
 
     <!-- css -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/css/bootstrap.min.css" integrity="sha512-NZ19NrT58XPK5sXqXnnvtf9T5kLXSzGQlVZL9taZWeTBtXoN3xIfTdxbkQh6QSoJfJgpojRqMfhyqBAAEeiXcA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -109,11 +113,6 @@
     
             </form>
 
-            <div class="camera d-none">
-                <video id="video" autoplay></video>
-                <button id="snap" class="btn btn-success title">Take Photo</button>
-                <canvas id="canvas"></canvas>
-            </div>
             
             <section class="idcard d-none">
                 <div class="id-card-tag"></div>
@@ -122,7 +121,7 @@
                 <div class="id-card-holder">
                     <div class="id-card">
                         <div class="header">
-                            <img src='' class="users_img" />
+                            <img src='{{asset('images\users_profile\users.jpg')}}' class="users_img" />
                         </div>
                         <h2 class="IDName"></h2>
                         <h3 class="IDuseename"></h3>
@@ -139,64 +138,6 @@
         </div>
 
     </section>
-
-    {{-- hidden  --}}
-    <div class="hidden_notice photo_notice d-none">
-        <div class="container">
-            <div class="container_wrapper">
-                <div class="top">
-                    <h4 class="header text-warning">
-                        <span>
-                            <i class="fa-solid fa-hand-point-right text-success"></i>
-                        </span>
-                        <span> জরুরী বিজ্ঞপ্তী </span>
-                        <span>
-                            <i class="fa-solid fa-hand-point-left text-success"></i>
-                        </span>
-                    </h4>
-                </div>
-                
-                <div class="bottom">
-                    <div class="bottom_top">
-                        <p class="title">
-                            আপনি অবশ্যই আপনার ছবি দিবেন। তা না হলে আপনার একাউন্টি ব্যান করা হতে পারে।
-                        </p>
-                    </div>
-                    <div class="bottom_bottom">
-                        <button class="btn btn-danger title">
-                            OK
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="hidden_notice cammera_error d-none">
-        <div class="container">
-            <div class="container_wrapper">
-                <div class="top">
-                    <h4 class="header text-warning">
-                        <span>
-                            <i class="fa-solid fa-hand-point-right text-success"></i>
-                        </span>
-                        <span> ক্যামেরা ত্রুটি </span>
-                        <span>
-                            <i class="fa-solid fa-hand-point-left text-success"></i>
-                        </span>
-                    </h4>
-                </div>
-                
-                <div class="bottom">
-                    <div class="bottom_top">
-                        <p class="title">
-                            আপনার ক্যামেরাতে ত্রুটি রয়েছে। ক্যামেরার পারমিশন ছাড়া আপনি আগিয়ে যেতে পারবেন না।
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script>
         const urls = {
