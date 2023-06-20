@@ -67,7 +67,7 @@
             home : '{{route('web_home_show')}}',
         };
     </script>
-    <script src="{{asset('.\js\now\account.js')}}"></script>
+    <script src="{{asset('.\js\now\account.js')}}?v=1.1"></script>
 
 </body>
 </html>
