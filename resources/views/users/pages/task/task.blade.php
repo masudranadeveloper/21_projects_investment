@@ -149,7 +149,7 @@
             <div class="bottom">
                 <div class="bottom_top">
                     <div class="products_wrapper">
-                        <img style="width:100%; height:15rem;object-fit: cover; border-radius:var(--border-radius)" class="products_img" src="https://i.dummyjson.com/data/products/3/thumbnail.jpg" alt="">
+                        <img style="width:100%; height:20rem;border-radius:var(--border-radius)" class="products_img" src="https://i.dummyjson.com/data/products/3/thumbnail.jpg" alt="">
                         <p class="title mt-3 mb-3 products_title">...</p>
                         <p class="title">পন্যর দাম : <span class="products_price">...</span>৳</p>
                         <input type="hidden" class="products_id" value="">

@@ -40,7 +40,6 @@ const get_products_data = () => {
             $('.products_price').html(data.data.price);
             $('.products_rate').html(data.data.rate);
             $('.products_ratings').html(data.data.ratings);
-            $('.products_img').html(url+'images/task/products/'+data.data.img);
         }
     });
 };
