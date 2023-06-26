@@ -69,7 +69,7 @@
                     <div class="note sendmoney d-none">
                         <p class="title">
                             <i class="fa-solid fa-share text-primary main-header"></i>
-                            <span class="text">আমাদের নাম্বারে টাকা সেন্ড মানি করুন</span>
+                            <span class="text">আমাদের নাম্বারে টাকা পেমেন্ট করুন</span>
                         </p>
                     </div>
 
@@ -81,9 +81,9 @@
                             </p>
                             <p class="title mb-3">
                                 <i class="fa-solid fa-share text-primary main-header"></i>
-                                <span class="text">সেন্ড মানি অপশন এ ক্লিক করুন</span>
+                                <span class="text">পেমেন্ট অপশন এ ক্লিক করুন</span>
                             </p>
-                            <img src="{{asset('.\images\icons\bkash_payment.jpeg')}}" class="d-none" alt="">
+                            <img src="{{asset('.\images\icons\bkash_payment.jpeg')}}" alt="">
                         </div>
                     @endif
                     
